@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace IntellVega.InterfacesLib
+namespace IntellVega.CBB.Interfaces
 {
     public interface IEditProperties
     {

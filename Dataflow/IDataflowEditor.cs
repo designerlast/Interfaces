@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace IntellVega.InterfacesLib.Dataflow
+namespace IntellVega.CBB.Interfaces.Dataflow
 {
     public interface IDataflowEditor
     {

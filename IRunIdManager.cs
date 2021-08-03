@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace IntellVega.InterfacesLib
+namespace IntellVega.CBB.Interfaces
 {
     public interface IVirtualManager
     {
