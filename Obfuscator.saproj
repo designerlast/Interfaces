@@ -1,0 +1,17 @@
+<SmartAssemblyProject ProjectId="{b60dd122-e7b4-4b7f-a53e-cd67cad59702}" Version="2.0">
+    <MainAssemblyFileName>..\src\IntellVega.Controls.DataflowListEditor\DataflowListEditor\AddIns\netcoreapp3.1\DataflowListEditor.dll</MainAssemblyFileName>
+    <Configuration Name="Release">
+        <Destination DestinationFileName=".\DataflowListEditorsss.dll" />
+        <Options>
+            <StrongNameSigning Sign="0" TamperProtect="0" />
+            <OtherOptimizations SealClasses="1" />
+            <OtherProtections SuppressIldasm="1" />
+            <Obfuscation ChangeMethodParent="1" CompilerGeneratedSerializable="1" FieldsNameMangling="2" NameMangling="3" />
+            <Debugging CreatePDB="1" ObfuscateDocumentsURL="0" />
+            <StringsEncoding Compress="1" Encode="1" UseCache="1" UseImprovedEncoding="1" />
+            <ExceptionReporting />
+            <FeatureUsageReporting />
+        </Options>
+        <Assemblies />
+    </Configuration>
+</SmartAssemblyProject>

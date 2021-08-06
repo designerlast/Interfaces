@@ -2,6 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <Configurations>Debug;Release;Verify;PublishDebug;PublishRelease</Configurations>
+    <Version>1.1.0.1892</Version>
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='PublishRelease|AnyCPU'">
+    <Optimize>true</Optimize>
+  </PropertyGroup>
+
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(ConfigurationName)' == 'PublishDebug' Or '$(ConfigurationName)' == 'PublishRelease'">
+    <Exec Command="PostBuild.cmd $(ProjectDir) $(OutDir) $(TargetName) $(ProjectName) $(ConfigurationName)" />
+  </Target>
 
 </Project>
