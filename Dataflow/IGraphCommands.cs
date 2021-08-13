@@ -6,6 +6,7 @@ namespace IntellVega.CBB.Interfaces
 {
     public interface IGraphCommands
     {
+        void OnNewCommandExcute();
         void OnOpenCommandExcute();
         void OnSaveCommandExcute();
         void OnRunCommandExcute();
