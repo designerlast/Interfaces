@@ -7,25 +7,30 @@ using System.Xml.Linq;
 
 namespace IntellVega.CBB.Interfaces
 {
-    public interface IDelegateArg : ICloneable
+    public interface IDelegateArgBase
     {
+        string Name { get; }
+        Type ParamType { get; }
+        object FallbackValue { get; set; }
+    }
+
+    public interface IDelegateArg : IDelegateArgBase, ICloneable
+    {
+        new Type ParamType { get; set; }
         string BindingID { get; }
         string AtomID { get; set; }
-        string Name { get; }
-        Type ParamType { get; set; }
         bool IsInput { get; }
         bool IsOutput { get; }
         void Set(IRunContext context, object val);
         object Get(IRunContext context);
         event Action<IRunContext> OnChanged;
     }
-    public interface IDelegateConfig
+
+    public interface IDelegateConfig : IDelegateArgBase
     {
-        string Name { get; }
-        Type ParamType { get; }
-        object Value { get; set; }
         event Action OnSettingsChanged;
     }
+
     public interface IDelegate : ICloneable
     {
         string AtomID { get; set; }
