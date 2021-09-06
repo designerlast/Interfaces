@@ -11,6 +11,10 @@ namespace IntellVega.CBB.Interfaces
         void AddLink(ViewMappingLink link);
         void RemoveLink(ViewMappingLink link);
     }
+    public interface IAttachableCollection
+    {
+        IEnumerable<IAttachableShape> AttachableItems { get; }
+    }
     public interface IShapeContainer
     {
         void AddShape(object viewModel);

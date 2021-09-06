@@ -49,4 +49,8 @@ namespace IntellVega.CBB.Interfaces
         void FromXml(XElement element);
         event Action OnDelegateChanged;
     }
+    public interface IViewModelStub
+    {
+        IDelegateArgBase ViewModel { get; }
+    }
 }
