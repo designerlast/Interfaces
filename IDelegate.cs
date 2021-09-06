@@ -24,6 +24,8 @@ namespace IntellVega.CBB.Interfaces
         void Set(IRunContext context, object val);
         object Get(IRunContext context);
         event Action<IRunContext> OnChanged;
+        void ConnectViewMapping();
+        void DisconnectViewMapping();
     }
 
     public interface IDelegateConfig : IDelegateArgBase
@@ -41,7 +43,8 @@ namespace IntellVega.CBB.Interfaces
         IEnumerable<IDelegateConfig> Settings { get; }
         int EstimateAllocMemory(IRunContext context);
         void SetType(Type t);// Set generic type
-        Type GetActivityType(); void Run(IRunContext context);// Support generic types only
+        Type GetActivityType();
+        void Run(IRunContext context);// Support generic types only
         XElement ToXml(string name);
         void FromXml(XElement element);
         event Action OnDelegateChanged;
