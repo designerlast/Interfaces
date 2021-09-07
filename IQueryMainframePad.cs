@@ -7,7 +7,7 @@ namespace IntellVega.CBB.Interfaces
     public interface IQueryMainframePad
     {
         IEnumerable<string> GetPadIdList();
-        public ViewMappingLink GetMappingLink(object viewModel);
+        public ViewMappingLink GetMappingLink(string viewModelName);
         object GetViewModel(ViewMappingLink link);
     }
     public class ViewMappingLink
