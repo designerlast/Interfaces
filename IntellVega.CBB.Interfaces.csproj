@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <Configurations>Debug;Release;Verify;PublishDebug;PublishRelease</Configurations>
-      <Version>1.1.5.1923</Version>
+      <Version>1.1.6.1924</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='PublishRelease|AnyCPU'">
