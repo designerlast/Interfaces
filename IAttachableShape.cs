@@ -13,7 +13,7 @@ namespace IntellVega.CBB.Interfaces
     }
     public interface IAttachableCollection
     {
-        IEnumerable<IAttachableShape> AttachableItems { get; }
+        IEnumerable<IDelegateArg> AttachableItems { get; }
     }
     public interface IShapeContainer
     {
