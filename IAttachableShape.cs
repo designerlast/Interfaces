@@ -6,7 +6,7 @@ namespace IntellVega.CBB.Interfaces
 {
     public interface IAttachableShape
     {
-        IAttachableShape AttachAllToViewModel();
+        IAttachableShape AttachAllToViewModel(IAttachableShape oldObj);
         void DetachAllFromViewModel();
         void AddLink(ViewMappingLink link);
         void RemoveLink(ViewMappingLink link);

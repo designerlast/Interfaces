@@ -24,7 +24,7 @@ namespace IntellVega.CBB.Interfaces
         void Set(IRunContext context, object val);
         object Get(IRunContext context);
         event Action<IRunContext> OnChanged;
-        void ConnectViewMapping();
+        void ConnectViewMapping(object oldObj);
         void DisconnectViewMapping();
     }
 
@@ -33,7 +33,7 @@ namespace IntellVega.CBB.Interfaces
         event Action OnSettingsChanged;
     }
 
-    public interface IDelegate : ICloneable
+    public interface IDelegate : ICloneable, IDisposable
     {
         string AtomID { get; set; }
         string TypeName { get; }

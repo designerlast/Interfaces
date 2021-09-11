@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace IntellVega.CBB.Interfaces
 {
+    public static class ExceptionHelper
+    {
+        public static string ExpandExceptionMessage(this Exception ex) => string.Join('\n', ex.Message, ex.InnerException?.ExpandExceptionMessage() ?? null);
+    }
     [Serializable]
     public class DeviceInitFailedException : Exception
     {
