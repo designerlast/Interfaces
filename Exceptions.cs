@@ -21,6 +21,17 @@ namespace IntellVega.CBB.Interfaces
           System.Runtime.Serialization.StreamingContext context)
             : base(info, context) { }
     }
+
+    [Serializable]
+    public class DeviceNotReadyException : Exception
+    {
+        public DeviceNotReadyException() { }
+        public DeviceNotReadyException(string message) : base(message) { }
+        public DeviceNotReadyException(string message, Exception inner) : base(message, inner) { }
+        protected DeviceNotReadyException(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
     [Serializable]
     public class DeviceCloseFailedException : Exception
     {

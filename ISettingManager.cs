@@ -14,11 +14,8 @@ namespace IntellVega.CBB.Interfaces
     { }
 
     [AttributeUsage(AttributeTargets.Class, Inherited = false, AllowMultiple = true)]
-    public sealed class ConfiguredAttribute : Attribute
-    {
-    }
-    [AttributeUsage(AttributeTargets.Class, Inherited = false, AllowMultiple = true)]
     public sealed class CalibDataAttribute : Attribute
     {
     }
+
 }
