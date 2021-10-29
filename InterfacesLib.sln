@@ -1,22 +1,34 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.40629.0
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31702.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBT.Interfaces", "DBT.InterfacesLib\DBT.Interfaces.csproj", "{9644BB40-36ED-426F-BF8D-8DE101DEF4F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IntellVega.CBB.Interfaces", "IntellVega.CBB.Interfaces.csproj", "{CDDE6CA0-9AD1-4D6A-A73E-92D16EE64F67}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		PublishDebug|Any CPU = PublishDebug|Any CPU
+		PublishRelease|Any CPU = PublishRelease|Any CPU
 		Release|Any CPU = Release|Any CPU
+		Verify|Any CPU = Verify|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{9644BB40-36ED-426F-BF8D-8DE101DEF4F0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9644BB40-36ED-426F-BF8D-8DE101DEF4F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9644BB40-36ED-426F-BF8D-8DE101DEF4F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9644BB40-36ED-426F-BF8D-8DE101DEF4F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDDE6CA0-9AD1-4D6A-A73E-92D16EE64F67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDDE6CA0-9AD1-4D6A-A73E-92D16EE64F67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDDE6CA0-9AD1-4D6A-A73E-92D16EE64F67}.PublishDebug|Any CPU.ActiveCfg = PublishDebug|Any CPU
+		{CDDE6CA0-9AD1-4D6A-A73E-92D16EE64F67}.PublishDebug|Any CPU.Build.0 = PublishDebug|Any CPU
+		{CDDE6CA0-9AD1-4D6A-A73E-92D16EE64F67}.PublishRelease|Any CPU.ActiveCfg = PublishRelease|Any CPU
+		{CDDE6CA0-9AD1-4D6A-A73E-92D16EE64F67}.PublishRelease|Any CPU.Build.0 = PublishRelease|Any CPU
+		{CDDE6CA0-9AD1-4D6A-A73E-92D16EE64F67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDDE6CA0-9AD1-4D6A-A73E-92D16EE64F67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDDE6CA0-9AD1-4D6A-A73E-92D16EE64F67}.Verify|Any CPU.ActiveCfg = Verify|Any CPU
+		{CDDE6CA0-9AD1-4D6A-A73E-92D16EE64F67}.Verify|Any CPU.Build.0 = Verify|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {32C77B01-ABA3-45C5-AED2-8B0E8CE73127}
 	EndGlobalSection
 EndGlobal
