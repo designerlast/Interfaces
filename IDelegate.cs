@@ -12,6 +12,7 @@ namespace IntellVega.CBB.Interfaces
         string Name { get; }
         Type ParamType { get; }
         object FallbackValue { get; set; }
+        bool IsVisible { get; set; }
     }
 
     public interface IDelegateArg : IDelegateArgBase, ICloneable

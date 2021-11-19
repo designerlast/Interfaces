@@ -102,4 +102,17 @@ namespace IntellVega.CBB.Interfaces
           System.Runtime.Serialization.SerializationInfo info,
           System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
     }
+
+    [Serializable]
+    public class UndefinedException : Exception
+    {
+        public string ArgumentName { get; private set; }
+        public UndefinedException() { }
+        //public UndefinedException(string message) : base(message) { }
+        public UndefinedException(string message, string argName) : base(message) { ArgumentName = argName; }
+        public UndefinedException(string message, Exception inner) : base(message, inner) { }
+        protected UndefinedException(
+          System.Runtime.Serialization.SerializationInfo info,
+          System.Runtime.Serialization.StreamingContext context) : base(info, context) { }
+    }
 }
