@@ -4,12 +4,8 @@ using System.Text;
 
 namespace IntellVega.CBB.Interfaces.Convert
 {
-    public interface IConvertibleFrom<T> : IConvertibleFrom
+    public interface IConvertibleFrom<T>
     {
         void ConvertFrom(T obj);
-    }
-    public interface IConvertibleFrom
-    {
-        ConvertAdapter Adapter { get; }
     }
 }
