@@ -8,7 +8,7 @@ namespace IntellVega.CBB.Interfaces
     {
         object Content { get; set; }
         Type ContentType { get; }
-        IAttachableObject AttachAllToViewModel(IAttachableObject oldObj);
+        void AttachAllToViewModel(IAttachableObject oldObj);
         void DetachAllFromViewModel();
         void AddLink(ViewMappingLink link);
         void RemoveLink(ViewMappingLink link);

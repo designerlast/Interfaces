@@ -7,12 +7,13 @@ using System.Xml.Linq;
 
 namespace IntellVega.CBB.Interfaces
 {
-    public interface IDelegateArgBase
+    public interface IDelegateArgBase : IXmlLinqSerializable
     {
         string Name { get; }
         Type ParamType { get; }
         object FallbackValue { get; set; }
         bool IsVisible { get; set; }
+        event Action<IAttachableObject> OnUpdateViewMapping;
     }
 
     public interface IDelegateArg : IDelegateArgBase, ICloneable
@@ -25,8 +26,6 @@ namespace IntellVega.CBB.Interfaces
         void Set(IRunContext context, object val);
         object Get(IRunContext context);
         event Action<IRunContext> OnChanged;
-        void ConnectViewMapping(object oldObj);
-        void DisconnectViewMapping();
     }
 
     public interface IDelegateConfig : IDelegateArgBase
@@ -49,9 +48,5 @@ namespace IntellVega.CBB.Interfaces
         XElement ToXml(string name);
         void FromXml(XElement element);
         event Action OnDelegateChanged;
-    }
-    public interface IViewModelStub
-    {
-        IDelegateArgBase ViewModel { get; }
     }
 }
