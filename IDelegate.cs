@@ -36,14 +36,14 @@ namespace IntellVega.CBB.Interfaces
     public interface IDelegate : ICloneable, IDisposable
     {
         string AtomID { get; set; }
-        string TypeName { get; }
+        string TypeName { get; }// Used to show what it is
         //Type Type { get; set; }
         IEnumerable<IDelegateArg> Inputs { get; }
         IEnumerable<IDelegateArg> Outputs { get; }
         IEnumerable<IDelegateConfig> Settings { get; }
         int EstimateAllocMemory(IRunContext context);
-        void SetType(Type t);// Set generic type
-        Type GetActivityType();
+        void SetGenericType(Type t);// Set generic type
+        Type GetGenericType();
         void Run(IRunContext context);// Support generic types only
         XElement ToXml(string name);
         void FromXml(XElement element);

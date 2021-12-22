@@ -10,8 +10,8 @@
         <Optimize>true</Optimize>
     </PropertyGroup>
 
-    <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(ConfigurationName)' == 'PublishDebug' Or '$(ConfigurationName)' == 'PublishRelease'">
-        <Exec Command="PostBuild.cmd $(ProjectDir) $(OutDir) $(TargetName) $(ProjectName) $(ConfigurationName)" />
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(Configuration)' == 'PublishDebug' Or '$(Configuration)' == 'PublishRelease'">
+        <Exec Command="PostBuild.cmd $(ProjectDir) $(OutDir) $(TargetName) $(ProjectName) $(Configuration)" />
     </Target>
 
 </Project>

@@ -10,5 +10,6 @@ namespace IntellVega.CBB.Interfaces
         void OnOpenCommandExcute();
         void OnSaveCommandExcute();
         void OnRunCommandExcute();
+        void OnRunVirtualCommandExcute();
     }
 }
