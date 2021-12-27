@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
         <Configurations>Debug;Release;Verify;PublishDebug;PublishRelease</Configurations>
-        <Version>1.5.0.2016</Version>
+        <Version>1.5.1.2033</Version>
     </PropertyGroup>
 
     <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='PublishRelease|AnyCPU'">
@@ -13,5 +13,9 @@
     <Target Name="PostBuild" AfterTargets="PostBuildEvent" Condition="'$(Configuration)' == 'PublishDebug' Or '$(Configuration)' == 'PublishRelease'">
         <Exec Command="PostBuild.cmd $(ProjectDir) $(OutDir) $(TargetName) $(ProjectName) $(Configuration)" />
     </Target>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.0" />
+    </ItemGroup>
 
 </Project>
