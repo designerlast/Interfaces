@@ -4,7 +4,7 @@ using System.Text;
 
 namespace IntellVega.CBB.Interfaces
 {
-    public interface ILogService
+    public interface ILoggingService
     {
         void Debug(object message);
         void DebugFormatted(string format, params object[] args);
