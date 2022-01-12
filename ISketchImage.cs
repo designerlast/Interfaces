@@ -11,6 +11,6 @@ namespace IntellVega.CBB.Interfaces
         /// </summary>
         /// <param name="statusText"></param>
         /// <param name="statusTextHexColor"></param>
-        public void SetCameraStatus(string statusText, string statusTextHexColor);
+        void SetCameraStatus(string statusText, string statusTextHexColor);
     }
 }
