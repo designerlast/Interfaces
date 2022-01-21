@@ -4,10 +4,12 @@ rem   PostBuild.cmd $(ProjectDir) $(OutDir) $(TargetName) $(ProjectName) $(Confi
 rem 该批处理会混淆dll并打包生成nuget package，调用obj\NugetPush.cmd完成发布。
 
 
+mutex IntellVega
+
 echo Starting obfuscating... (ProjectDir = %1, OutDir = %2, TargetName = %3, ProjectName = %4, ConfigurationName = %5)
 set backupName=%3_backup
 
-set txtfile=%2\PostBuildInfo.txt
+set txtfile=%2\%3_PostBuildInfo.txt
 set cmdfile=%1obj\NugetPush.cmd
 echo ren %2%3.dll %backupName%.dll
 if exist %cmdfile%                del %cmdfile%
@@ -17,6 +19,7 @@ if exist %2%backupName%.deps.json del %2%backupName%.deps.json
 ren %2%3.dll %backupName%.dll
 ren %2%3.pdb %backupName%.pdb
 ren %2%3.deps.json %backupName%.deps.json
+
 
 "C:\Program Files\Red Gate\SmartAssembly 8\SmartAssembly.com" ^
     /build "%1Obfuscator.saproj" ^
@@ -35,9 +38,12 @@ ren %2%3.deps.json %backupName%.deps.json
     /obfuscatepdburls=false ^
     /assembly=%3;prune:true,merge:false,nameobfuscate:true,dynamicproxy:true,compressencryptresources:true,controlflowobfuscate:1 > %txtfile% 2>&1
 echo Obfuscating finished.
+mutex /release IntellVega
 
 if %errorlevel% EQU 9009 echo Failed to find SmartAssembly.com "C:\Program Files\Red Gate\SmartAssembly 8\". Please make sure SmartAssembly is installed. & goto Error
 if %errorlevel% NEQ 0 goto Error
+
+copy %txtfile% %txtfile%.bak
 
 echo dotnet pack %4.csproj --no-build -c %5
 dotnet pack %4.csproj --no-build  -c %5 > %txtfile% 2>&1
@@ -69,7 +75,7 @@ rem echo from = %from%, to = %to%, subString = %subString%, packPath = %packPath
 echo Extract package path: %finalPath%
 
 echo nuget push %finalPath% -source http://69.230.220.250:8081/repository/nuget-hosted/ > %cmdfile%
-echo Saved to %cmdfile%:
+echo @@@ %cmdfile%
 echo nuget push %finalPath% -source http://69.230.220.250:8081/repository/nuget-hosted/
 
 rem nuget setapikey 08197060-2848-3706-9e40-93d8d63bdXXX -source http://69.230.220.250:8081/repository/nuget-hosted/
