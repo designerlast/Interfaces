@@ -13,7 +13,7 @@ namespace IntellVega.CBB.Interfaces
         Type ParamType { get; }
         object FallbackValue { get; set; }
         bool IsVisible { get; set; }
-        event Action<IAttachableObject> OnUpdateViewMapping;
+        event Action OnUpdateViewMapping;
     }
 
     public interface IDelegateArg : IDelegateArgBase, ICloneable
