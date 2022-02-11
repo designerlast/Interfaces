@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using System.Drawing;
 
 namespace IntellVega.CBB.Interfaces
 {
@@ -12,5 +10,17 @@ namespace IntellVega.CBB.Interfaces
         /// <param name="statusText"></param>
         /// <param name="statusTextHexColor"></param>
         void SetCameraStatus(string statusText, string statusTextHexColor);
+
+        /// <summary>
+        /// 设置控件背景图片
+        /// </summary>
+        /// <param name="imagePath"></param>
+        void SetBackgroundImage(string imagePath);
+
+        /// <summary>
+        /// 设置控件背景图片
+        /// </summary>
+        /// <param name="bitmap"></param>
+        void SetBackgroundImage(Bitmap bitmap);
     }
 }
