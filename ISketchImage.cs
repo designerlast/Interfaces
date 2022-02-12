@@ -15,12 +15,12 @@ namespace IntellVega.CBB.Interfaces
         /// 设置控件背景图片
         /// </summary>
         /// <param name="imagePath"></param>
-        void SetBackgroundImage(string imagePath);
+        void SetBackgroundImage(object viewModel, string imagePath);
 
         /// <summary>
         /// 设置控件背景图片
         /// </summary>
         /// <param name="bitmap"></param>
-        void SetBackgroundImage(Bitmap bitmap);
+        void SetBackgroundImage(object viewModel, Bitmap bitmap);
     }
 }

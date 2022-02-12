@@ -9,6 +9,7 @@ namespace IntellVega.CBB.Interfaces
         IEnumerable<string> GetPadIdList();
         public ViewMappingLink GetMappingLink(object viewModelName);
         object GetViewModel(ViewMappingLink link);
+        object GetViewModel(string id);
     }
     public class ViewMappingLink
     {
