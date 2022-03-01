@@ -8,7 +8,7 @@ namespace IntellVega.CBB.Interfaces
         /// 设置SketchImage顶部状态栏消息内容
         /// </summary>
         /// <param name="message"></param>
-        void SetTitleMessage(string message);
+        void SetTitleMessage(object viewModel, string message);
 
         /// <summary>
         /// 设置控件背景图片
