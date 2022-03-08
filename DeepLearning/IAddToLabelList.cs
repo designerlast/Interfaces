@@ -6,6 +6,6 @@ namespace IntellVega.CBB.Interfaces.DeepLearning
 {
     public interface IAddToLabelList
     {
-        void AddToLabelList<T>(T obj);
+        string AddToLabelList<T>(T obj);
     }
 }
