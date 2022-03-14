@@ -7,7 +7,7 @@ namespace IntellVega.CBB.Interfaces
 {
     public interface IXmlLinqSerializable
     {
-        public XElement ToXml();
+        public XElement ToXml(string name);
         public void FromXml(XElement xml);
     }
 }
