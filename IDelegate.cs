@@ -33,7 +33,7 @@ namespace IntellVega.CBB.Interfaces
         event Action OnSettingsChanged;
     }
 
-    public interface IDelegate : ICloneable, IDisposable
+    public interface IDelegate : ICloneable, IDisposable, IXmlLinqSerializable
     {
         string AtomID { get; set; }
         string TypeName { get; }// Used to show what it is
@@ -45,8 +45,6 @@ namespace IntellVega.CBB.Interfaces
         void SetGenericType(Type t);// Set generic type
         Type GetGenericType();
         void Run(IRunContext context);// Support generic types only
-        XElement ToXml(string name);
-        void FromXml(XElement element);
         event Action OnDelegateChanged;
     }
 }
