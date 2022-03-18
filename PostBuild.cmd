@@ -3,7 +3,10 @@ rem 把本批处理复制到每个项目，在工程设置的Build Event设置Po
 rem   PostBuild.cmd $(ProjectDir) $(OutDir) $(TargetName) $(ProjectName) $(ConfigurationName)
 rem 该批处理会混淆dll并打包生成nuget package，调用obj\NugetPush.cmd完成发布。
 
+mutex.exe /release IntellVega
+
 echo Enter post build and wait for obfuscating... 
+
 mutex IntellVega
 
 echo Starting obfuscating... (ProjectDir = %1, OutDir = %2, TargetName = %3, ProjectName = %4, ConfigurationName = %5)
