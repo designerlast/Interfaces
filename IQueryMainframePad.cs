@@ -10,6 +10,7 @@ namespace IntellVega.CBB.Interfaces
         public ViewMappingLink GetMappingLink(object viewModelName);
         object GetViewModel(ViewMappingLink link);
         object GetViewModel(string id);
+        event Action<object> OnFocusChanged;
     }
     public class ViewMappingLink
     {
