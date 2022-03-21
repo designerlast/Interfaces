@@ -4,8 +4,8 @@ using System.Text;
 
 namespace IntellVega.CBB.Interfaces.DeepLearning
 {
-    public  interface IGetColors
+    public  interface IGetAllClassItems
     {
-        object GetColors();
+        object GetAllClassItems();
     }
 }
