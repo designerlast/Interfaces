@@ -4,7 +4,7 @@ using System.Text;
 
 namespace IntellVega.CBB.Interfaces.Vision
 {
-    public interface IMainPad
+    public interface IUpdateRunningStatus
     {
         void SetProductName(string productName);
         void SetCuttingTime(string cuttingTime);
