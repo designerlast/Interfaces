@@ -13,6 +13,7 @@ namespace IntellVega.CBB.Interfaces
         Type ParamType { get; }
         object FallbackValue { get; set; }
         bool IsVisible { get; set; }
+        bool ExpandCollection { get; set; }
         event Action OnUpdateViewMapping;
     }
 
