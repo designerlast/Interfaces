@@ -12,6 +12,12 @@ namespace IntellVega.CBB.Interfaces.Dataflow
         void SetListGraph(string key);
 
         /// <summary>
+        /// 流程新增元素
+        /// </summary>
+        /// <param name="item"></param>
+        void AddSourceItem(SourceItem item);
+
+        /// <summary>
         /// 获取流程图元素集合（子函数、变量、事件）
         /// </summary>
         /// <returns></returns>
