@@ -19,7 +19,6 @@ namespace IntellVega.CBB.Interfaces
 
     public interface IDelegateArg : IDelegateArgBase, ICloneable
     {
-        new Type ParamType { get; set; }
         string BindingID { get; }
         string AtomID { get; set; }
         bool IsInput { get; }
