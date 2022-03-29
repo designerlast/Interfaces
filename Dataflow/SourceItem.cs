@@ -60,6 +60,16 @@ namespace IntellVega.CBB.Interfaces.Dataflow
         /// <summary>
         /// 全局变量
         /// </summary>
-        GlobalVariable = 2
+        GlobalVariable = 2,
+
+        /// <summary>
+        /// 循环
+        /// </summary>
+        Loop = 3,
+
+        /// <summary>
+        /// 事件
+        /// </summary>
+        EventHandler = 4,
     }
 }
