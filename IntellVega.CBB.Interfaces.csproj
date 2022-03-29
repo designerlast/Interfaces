@@ -3,7 +3,7 @@
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
         <Configurations>Debug;Release;Verify;PublishDebug;PublishRelease;PublishVerify</Configurations>
-        <Version>1.7.5.2128</Version>
+        <Version>1.7.6.2127</Version>
     </PropertyGroup>
 
     <ItemGroup>
