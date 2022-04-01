@@ -6,9 +6,12 @@ namespace IntellVega.CBB.Interfaces.Vision
 {
     public interface IUpdateRunningStatus
     {
-        void SetProductName(float productName);
-        void SetCuttingTime(float cuttingTime);
-        void SetProcessStatus(float processStatus);
-        void SetCurrentCoordinate(float[] coordinateArr);
+        void UpdateProductName(string productName);
+        void UpdateCuttingTime(string cuttingTime);
+        void UpdateProcessStatus(string processStatus);
+        void UpdateXAxis(float xAxis);
+        void UpdateYAxis(float yAxis);
+        void UpdateΘAxis(float θAxis);
+        void UpdateZAxis(float zAxis);
     }
 }
