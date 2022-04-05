@@ -21,5 +21,19 @@ namespace IntellVega.CBB.Interfaces
         /// </summary>
         /// <param name="bitmap"></param>
         void SetBackgroundImage(object viewModel, Bitmap bitmap);
+
+        /// <summary>
+        /// 通过相机自定义名称切换相机，比如传入“相机1”
+        /// 仅支持Image1
+        /// </summary>
+        /// <param name="name"></param>
+        void SwitchCameraByCustomName(string name, object viewModel = null);
+
+        /// <summary>
+        /// 通过相机id切换相机
+        /// 仅支持Image1
+        /// </summary>
+        /// <param name="id"></param>
+        void SwitchCameraById(string id, object viewModel = null);
     }
 }
