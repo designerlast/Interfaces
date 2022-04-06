@@ -11,7 +11,7 @@ namespace IntellVega.CBB.Interfaces.Vision
         void UpdateProcessStatus(string processStatus);
         void UpdateXAxis(float xAxis);
         void UpdateYAxis(float yAxis);
-        void UpdateΘAxis(float θAxis);
+        void UpdateRAxis(float rAxis);
         void UpdateZAxis(float zAxis);
     }
 }
