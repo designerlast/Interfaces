@@ -4,7 +4,9 @@
     {
         void SetLableSelected(string id);
 
-        void AddToLabelList<T>(T shape);
+        void AddToLabelList<T>(string key, T shape);
+
+        void ImageChanged(string key);
 
         void DeleteToLabelList(string ShapeID);
     }
