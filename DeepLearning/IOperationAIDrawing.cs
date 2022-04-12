@@ -5,5 +5,7 @@
         void SetShapeSelected(string shapeID);
 
         void DeleteDrawingShape(string shapeID);
+
+        void SetShapeColorChanged(object obj);
     }
 }
