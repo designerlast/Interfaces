@@ -6,8 +6,6 @@ namespace IntellVega.CBB.Interfaces.DeepLearning
 {
     public interface IShowInferProgress
     {
-        void ShowInferProgress(int processed, int total);
-
         void ShowInferProgress();
     }
 }
