@@ -7,5 +7,7 @@
         void DeleteDrawingShape(string shapeID);
 
         void SetShapeColorChanged(object obj);
+
+        void SetSingleShapeChanged(string labelGuid, string labelName, string labelColo);
     }
 }
