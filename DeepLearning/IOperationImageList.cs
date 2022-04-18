@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace IntellVega.CBB.Interfaces.DeepLearning
 {
@@ -29,5 +30,12 @@ namespace IntellVega.CBB.Interfaces.DeepLearning
         /// </summary>
         /// <returns></returns>
         List<string> GetImagesForTraining();
+
+        /// <summary>
+        /// 更新图片推理结果
+        /// </summary>
+        /// <param name="imagePath"></param>
+        /// <param name="result"></param>
+        void UpdateImageReasonResult(string imagePath, List<Tuple<string, double>> result);
     }
 }
