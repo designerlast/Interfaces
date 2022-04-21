@@ -32,6 +32,12 @@ namespace IntellVega.CBB.Interfaces.DeepLearning
         List<string> GetImagesForTraining();
 
         /// <summary>
+        /// 获取图片列表Json文件
+        /// </summary>
+        /// <returns></returns>
+        string GetImagesJsonPath();
+
+        /// <summary>
         /// 更新图片推理结果
         /// </summary>
         /// <param name="imagePath"></param>
