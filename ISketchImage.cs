@@ -35,5 +35,14 @@ namespace IntellVega.CBB.Interfaces
         /// </summary>
         /// <param name="id"></param>
         void SwitchCameraById(string id, object viewModel = null);
+
+        /// <summary>
+        /// 显示十字中心线
+        /// </summary>
+        /// <param name="showCross"></param>
+        /// <param name="deltaX">像素单位</param>
+        /// <param name="deltaY">像素单位</param>
+        /// <param name="sideLength">侧翼长度</param>
+        void ShowCross(bool showCross, int deltaX = 0, int deltaY = 0, int sideLength = 100);
     }
 }
