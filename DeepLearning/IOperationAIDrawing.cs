@@ -2,7 +2,7 @@
 {
     public interface IOperationAIDrawing
     {
-        void EditImage(string imgPath);
+        void EditImage(string imgPath,bool inCollection);
 
         void ClearImage();
 
