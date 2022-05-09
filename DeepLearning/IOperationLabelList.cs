@@ -6,7 +6,7 @@
 
         void AddToLabelList<T>(string key, T shape);
 
-        void ImageChanged(string key);
+        void ImageChanged(string imgPath, bool inCollection);
 
         void DeleteToLabelList(string ShapeID);
     }
