@@ -2,6 +2,10 @@
 {
     public interface IOperationAIDrawing
     {
+        void EditImage(string imgPath);
+
+        void ClearImage();
+
         void SetShapeSelected(string shapeID);
 
         void DeleteDrawingShape(string shapeID);
