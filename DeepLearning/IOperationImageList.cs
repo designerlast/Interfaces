@@ -42,6 +42,6 @@ namespace IntellVega.CBB.Interfaces.DeepLearning
         /// </summary>
         /// <param name="imagePath"></param>
         /// <param name="result"></param>
-        void UpdateImageReasonResult(string imagePath, List<Tuple<string, double>> result);
+        void UpdateImageReasonResult(string imagePath, Tuple<TaskType, List<string>, Dictionary<string, double>> result);
     }
 }
