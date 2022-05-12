@@ -6,6 +6,7 @@ namespace IntellVega.CBB.Interfaces.InspectTubuleControl
 {
     public interface IInspectTubuleControl
     {
-        void RunRecipe(int arg);
+        void RunRecipe(RecipeModel recipeModel);
+        void SetChildViewModel(RecipeEnum imageSource, object viewModel);
     }
 }
