@@ -85,6 +85,10 @@ namespace IntellVega.CBB.Interfaces.InspectTubuleControl
         /// 配方类型
         /// </summary>
         public RecipeEnum RecipeEnum { get; set; }
+        /// <summary>
+        /// 界面对应的图片显示框
+        /// </summary>
+        public string ImageId { get; set; }
         #endregion
 
     }
