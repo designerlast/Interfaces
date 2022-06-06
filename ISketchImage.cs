@@ -51,6 +51,6 @@ namespace IntellVega.CBB.Interfaces
         /// </summary>
         /// <param name="point">需要居中的点</param>
         /// <param name="zoom">缩放倍数</param>
-        void AutoImageState(Point point, double zoom);
+        void AutoImageState(double x, double y, double zoom);
     }
 }
