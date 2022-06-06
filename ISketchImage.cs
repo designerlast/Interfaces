@@ -44,5 +44,13 @@ namespace IntellVega.CBB.Interfaces
         /// <param name="deltaY">像素单位</param>
         /// <param name="sideLength">侧翼长度</param>
         void ShowCross(bool showCross, int deltaX = 0, int deltaY = 0, int sideLength = 100);
+
+        /// <summary>
+        /// 根据指定的坐标和倍数显示图片
+        /// 设置好BackGroundImageSource后，再调用此方法
+        /// </summary>
+        /// <param name="point">需要居中的点</param>
+        /// <param name="zoom">缩放倍数</param>
+        void AutoImageState(Point point, double zoom);
     }
 }
