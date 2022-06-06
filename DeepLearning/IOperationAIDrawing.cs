@@ -13,5 +13,7 @@
         void SetShapeColorChanged(object obj);
 
         void SetSingleShapeChanged(string labelGuid, string labelName, string labelColo);
+
+        void SetImageExistsLabels(string[] files);
     }
 }
