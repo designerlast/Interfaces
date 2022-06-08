@@ -52,5 +52,10 @@ namespace IntellVega.CBB.Interfaces
         /// <param name="point">需要居中的点</param>
         /// <param name="zoom">缩放倍数</param>
         void AutoImageState(double x, double y, double zoom);
+
+        /// <summary>
+        /// 清空图片和ROI
+        /// </summary>
+        void ClearROIAndImage();
     }
 }
