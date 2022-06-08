@@ -15,5 +15,7 @@
         void SetSingleShapeChanged(string labelGuid, string labelName, string labelColo);
 
         void SetImageExistsLabels(string[] files);
+
+        void SetInferLabels(string file, TaskType type, object obj);
     }
 }
