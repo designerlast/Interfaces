@@ -2,11 +2,35 @@
 
     <PropertyGroup>
         <TargetFramework>netstandard2.1</TargetFramework>
-        <Configurations>Debug;Release;Verify;PublishDebug;PublishRelease;PublishVerify</Configurations>
-        <Version>1.9.19.2198</Version>
     </PropertyGroup>
 
-    <ItemGroup>
+  <Choose>
+    <When Condition="$(Configuration.EndsWith('Release'))">
+      <PropertyGroup>
+        <OutputPath>..\Release\</OutputPath>
+        <PostfixDebug></PostfixDebug>
+        <Product>$(AssemblyName)(Release Version)</Product>
+        <AssemblyTitle>$(AssemblyName)(Release Version)</AssemblyTitle>
+      </PropertyGroup>
+    </When>
+    <Otherwise>
+      <PropertyGroup>
+        <OutputPath>..\Debug\</OutputPath>
+        <PostfixDebug>.Debug</PostfixDebug>
+        <Product>$(AssemblyName)(Debug Version)</Product>
+        <AssemblyTitle>$(AssemblyName)(Debug Version)</AssemblyTitle>
+      </PropertyGroup>
+    </Otherwise>
+  </Choose>
+
+  <PropertyGroup>
+    <Configurations>Debug;Release;Verify;PublishDebug;PublishRelease;PublishVerify</Configurations>
+    <Version>1.10.0.2199</Version>
+    <TargetName>$(AssemblyName)</TargetName>
+    <PackageId>$(AssemblyName)$(PostfixDebug)</PackageId>
+  </PropertyGroup>
+
+  <ItemGroup>
       <PackageReference Include="System.Collections" Version="4.3.0" />
       <PackageReference Include="System.ComponentModel.Annotations" Version="5.0.0" />
       <PackageReference Include="System.Drawing.Common" Version="6.0.0" />

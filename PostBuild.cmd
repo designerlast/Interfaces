@@ -13,7 +13,7 @@ echo Starting obfuscating... (ProjectDir = %1, OutDir = %2, TargetName = %3, Pro
 set backupName=%3_backup
 
 set txtfile=%2\%3_PostBuildInfo.txt
-set cmdfile=%1obj\NugetPush.cmd
+set cmdfile=%1%2NugetPush-%5.cmd
 echo ren %2%3.dll %backupName%.dll
 if exist %cmdfile%                del %cmdfile%
 if exist %2%backupName%.dll       del %2%backupName%.dll
