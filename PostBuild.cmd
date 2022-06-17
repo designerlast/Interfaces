@@ -91,6 +91,7 @@ set prevError=%errorlevel%
 echo *** Error occured. Error code = %prevError% ***
 type %txtfile%
 echo *** End of error infomation ***
+if %prevError% EQU 0 exit 1
 exit %prevError%
 
 :OK
