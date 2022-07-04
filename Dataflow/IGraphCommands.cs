@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace IntellVega.CBB.Interfaces
+﻿namespace IntellVega.CBB.Interfaces
 {
     public interface IGraphCommands
     {
@@ -11,5 +7,6 @@ namespace IntellVega.CBB.Interfaces
         bool OnSaveCommandExcute();
         void OnRunCommandExcute();
         void OnRunVirtualCommandExcute();
+        bool OnSaveAsCommandExcute();
     }
 }
