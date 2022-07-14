@@ -14,6 +14,6 @@ namespace IntellVega.CBB.Interfaces
 
         void Error(string message);
 
-        bool Ask(string message);
+        void Ask(string message, Func<bool, bool> actionBeforeClose);
     }
 }
