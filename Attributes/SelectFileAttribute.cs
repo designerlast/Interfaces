@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace IntellVega.CBB.Interfaces
+namespace IntellVega.CBB.Interfaces.Attributes
 {
 	public class SelectFileAttribute:RemarkAttribute
 	{
