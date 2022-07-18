@@ -7,7 +7,7 @@ namespace IntellVega.CBB.Interfaces.PathSelection
 {
 	public class FilePathString
 	{
-		[SelectFile("inFilePath","","路径选择")]
+		[SelectFile("inFilePath","","路径选择",false)]
 		public string Path { get; set; }
 	}
 }
