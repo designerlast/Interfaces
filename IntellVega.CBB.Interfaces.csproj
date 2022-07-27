@@ -25,7 +25,7 @@
 
   <PropertyGroup>
     <Configurations>Debug;Release;Verify;PublishDebug;PublishRelease;PublishVerify</Configurations>
-    <Version>2.1.9.2238</Version>
+    <Version>2.1.10.2246</Version>
     <TargetName>$(AssemblyName)</TargetName>
     <PackageId>$(AssemblyName)$(PostfixDebug)</PackageId>
   </PropertyGroup>
