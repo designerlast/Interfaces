@@ -18,10 +18,13 @@ namespace IntellVega.CBB.Interfaces
         /// </summary>
         public bool IsEnabled { get; set; }
 
-        public RemarkAttribute(string remarkLocalName, bool isEnabled = true)
+        public string Description { get; set; }
+
+        public RemarkAttribute(string remarkLocalName, bool isEnabled = true, string description = null)
         {
             this.RemarkLocalName = remarkLocalName;
             this.IsEnabled = isEnabled;
+            this.Description = description;
         }
     }
 
