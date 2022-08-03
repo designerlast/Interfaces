@@ -7,6 +7,9 @@ namespace IntellVega.CBB.Interfaces.RuningState
 {
     public enum StateType
     {
+        [Display(Name = "默认")]
+        None = -1,
+
         [Display(Name = "停止中")]
         Stopping = 0,
 
@@ -18,5 +21,8 @@ namespace IntellVega.CBB.Interfaces.RuningState
 
         [Display(Name = "错误")]
         Error = 3,
+
+        [Display(Name = "平台Load完成")]
+        PlatformLoaded = 4,
     }
 }
