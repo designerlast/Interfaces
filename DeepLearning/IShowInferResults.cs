@@ -2,6 +2,8 @@
 {
     public interface IShowInferResults
     {
-        void ShowStatisticsInfo(int totalTime, int totalCount, double ar, double ap, double miou);
+        void ShowModelData(string modelFolderPath);
+
+        void AddModelData(object obj);
     }
 }
