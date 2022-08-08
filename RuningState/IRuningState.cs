@@ -9,7 +9,7 @@ namespace IntellVega.CBB.Interfaces.RuningState
         /// <summary>
         /// 通知程序运行状态
         /// </summary>
-        /// <param name="stateType">停止中：Stopping = 0 运行中：Runing = 1</param>
+        /// <param name="stateType">状态类型</param>
         void NotifyRuningState(StateType stateType);
     }
 }
