@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using IntellVega.CBB.Interfaces.Enums;
+using System.Drawing;
 
 namespace IntellVega.CBB.Interfaces
 {
@@ -57,5 +58,11 @@ namespace IntellVega.CBB.Interfaces
         /// 清空图片和ROI
         /// </summary>
         void ClearROIAndImage();
+
+        /// <summary>
+        /// 设置SketchImage显示的检测结果
+        /// </summary>
+        /// <param name="message"></param>
+        void SetDetectionResult(object viewModel, DetectionResult result);
     }
 }
