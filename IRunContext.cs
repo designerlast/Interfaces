@@ -14,5 +14,8 @@ namespace IntellVega.CBB.Interfaces
         T GetValue<T>(string key);
         int LoopIndex { get; set; }
         TriggerToken Token { get; set; }
+        IRunContext NextContext { get; set; }
+        bool IsEmpty { get; }
+        List<object> Enumerators { get; set; }
     }
 }
