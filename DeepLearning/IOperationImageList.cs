@@ -20,16 +20,11 @@ namespace IntellVega.CBB.Interfaces.DeepLearning
         void SetImageMarkState(string imagePath,bool isMarked);
 
         /// <summary>
-        /// 获取推理图片集
+        /// 返回指定类型图片的路径集合
         /// </summary>
+        /// <param name="type">过滤图片类型</param>
         /// <returns></returns>
-        List<string> GetImagesForReasoning();
-
-        /// <summary>
-        /// 获取训练图片集
-        /// </summary>
-        /// <returns></returns>
-        List<string> GetImagesForTraining();
+        List<string> GetFilterImagesPath(ImageFilterType type);
 
         /// <summary>
         /// 获取图片列表Json文件
