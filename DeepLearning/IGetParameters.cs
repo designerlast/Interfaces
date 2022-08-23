@@ -15,5 +15,11 @@ namespace IntellVega.CBB.Interfaces.DeepLearning
         /// </summary>
         /// <returns></returns>
         Dictionary<string, object> GetReasonParameters();
+
+        /// <summary>
+        /// 获取训练增强参数
+        /// </summary>
+        /// <returns></returns>
+        Dictionary<string, object> GetTrainEnhanceParameters();
     }
 }

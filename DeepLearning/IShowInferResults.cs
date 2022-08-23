@@ -5,5 +5,7 @@
         void ShowModelData(string modelFolderPath);
 
         void AddModelData(object obj);
+
+        string GetCheckedVersion();
     }
 }
