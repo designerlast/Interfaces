@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace IntellVega.CBB.Interfaces.DeepLearning.ResponseModel
@@ -13,5 +14,7 @@ namespace IntellVega.CBB.Interfaces.DeepLearning.ResponseModel
     {
         public int Id { get; set; }
         public string Name { get; set; }
+        public double Confidence { get; set; }
+        public Rectangle Rectangle { get; set; }
     }
 }
