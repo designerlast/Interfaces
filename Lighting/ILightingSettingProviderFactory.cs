@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CameraLightSetting.Interfaces
+namespace IntellVega.CBB.Interfaces.Lighting
 {
     public interface ILightingSettingProviderFactory
     {
