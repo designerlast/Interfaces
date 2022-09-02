@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using IntellVega.CBB.Interfaces.Enums;
 
 namespace IntellVega.CBB.Interfaces
 {
@@ -31,12 +29,11 @@ namespace IntellVega.CBB.Interfaces
         void SetSelectionMulti(int rows, int cols);
 
         /// <summary>
-        /// Sets the message shown in the left-most pane in the status bar.
+        /// 设置状态栏消息
         /// </summary>
-        /// <param name="message">The message text.</param>
-        /// <param name="highlighted">Whether to highlight the text</param>
-        /// <param name="icon">Icon to show next to the text</param>
-        void SetMessage(string message, bool highlighted = false);
+        /// <param name="message">消息内容</param>
+        /// <param name="status">消息状态（文字颜色） Normal：黑色 Success：绿色 Fail：红色 Error：红色 Warning：橙色</param>
+        void SetMessage(string message, SystemStatus status = SystemStatus.Normal);
 
         /// <summary>
         /// Set mode status bar, location at rightest
