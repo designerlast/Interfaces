@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Concurrent;
+using System.Collections.Generic;
 using System.Drawing;
 
 namespace IntellVega.CBB.Interfaces.Camera
@@ -60,5 +63,13 @@ namespace IntellVega.CBB.Interfaces.Camera
         /// </summary>
         /// <returns></returns>
         Bitmap Snap();
+        /// <summary>
+        /// 采集的图像队列
+        /// </summary>
+        Queue<VegaImage> Images { get; }
+        /// <summary>
+        /// 当前采集图像
+        /// </summary>
+        VegaImage CurrentFrame { get; }
     }
 }
