@@ -1,15 +1,18 @@
-﻿namespace IntellVega.CBB.Interfaces.SystemSetting
+﻿using IntellVega.CBB.Interfaces.Attributes;
+using IntellVega.CBB.Interfaces.PathSelection;
+
+namespace IntellVega.CBB.Interfaces.SystemSetting
 {
     public class Parameters
     {
         [Remark("启动设置")]
-        public StartupSettings StartupSettings { get; set; }
+        public StartupSettings StartupSettings { get; set; } = new StartupSettings();
 
         [Remark("图片保存与清理")]
-        public ProjectImageSettings ProjectImageSettings { get; set; }
+        public ProjectImageSettings ProjectImageSettings { get; set; } = new ProjectImageSettings();
 
         [Remark("日志保存设置")]
-        public LogSettings LogSettings { get; set; }
+        public LogSettings LogSettings { get; set; } = new LogSettings();
     }
 
     public class StartupSettings
@@ -29,8 +32,8 @@
         /// <summary>
         /// 图片导出路径
         /// </summary>
-        [Remark("图片保存路径")]
-        public string ImageExportPath { get; set; }
+        [SelectFolderAttribute("图片导出路径")]
+        public FilePathString ImageExportPath { get; set; }
 
         /// <summary>
         /// 是否保存图片
@@ -41,7 +44,7 @@
         /// <summary>
         /// 图像保留天数
         /// </summary>
-        [Remark("图像保留天数")]
+        [Numeric("图像保留天数", true, 1, 100, 2)]
         public int ImageRetentionDays { get; set; } = 10;
 
         /// <summary>
@@ -56,7 +59,7 @@
         /// <summary>
         /// 日志保留天数
         /// </summary>
-        [Remark("日志保留天数")]
+        [Numeric("日志保留天数", true, 1, 100, 2)]
         public int LogRetentionDays { get; set; } = 30;
 
         /// <summary>
