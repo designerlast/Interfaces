@@ -10,85 +10,88 @@ namespace IntellVega.CBB.Interfaces.Plc
         bool IsOpen { get; }
         //实例名称
         string Name { get; }
+        //相同实例的流水号
         int CountNum { get; }
         Guid Guid { get; }
 
-        bool ReadBool(string startAddress, out bool value);
+        void Read(string startAddress, ushort length, out byte[] value);
 
-        bool ReadShort(string startAddress, out short value);
+        void ReadBool(string startAddress, out bool value);
 
-        bool ReadUShort(string startAddress, out ushort value);
+        void ReadShort(string startAddress, out short value);
 
-        bool ReadInt32(string startAddress, out int value);
+        void ReadUShort(string startAddress, out ushort value);
 
-        bool ReadUInt32(string startAddress, out uint value);
+        void ReadInt32(string startAddress, out int value);
 
-        bool ReadFloat(string startAddress, out float value);
+        void ReadUInt32(string startAddress, out uint value);
 
-        bool ReadInt64(string startAddress, out long value);
+        void ReadFloat(string startAddress, out float value);
 
-        bool ReadUInt64(string startAddress, out ulong value);
+        void ReadInt64(string startAddress, out long value);
 
-        bool ReadDouble(string startAddress, out double value);
+        void ReadUInt64(string startAddress, out ulong value);
 
-        bool ReadBool(string startAddress, ushort length, out bool[] value);
+        void ReadDouble(string startAddress, out double value);
 
-        bool ReadShort(string startAddress, ushort length, out short[] value);
+        void ReadBool(string startAddress, ushort length, out bool[] value);
 
-        bool ReadUShort(string startAddress, ushort length, out ushort[] value);
+        void ReadShort(string startAddress, ushort length, out short[] value);
 
-        bool ReadInt32(string startAddress, ushort length, out int[] value);
+        void ReadUShort(string startAddress, ushort length, out ushort[] value);
 
-        bool ReadUInt32(string startAddress, ushort length, out uint[] value);
+        void ReadInt32(string startAddress, ushort length, out int[] value);
 
-        bool ReadFloat(string startAddress, ushort length, out float[] value);
+        void ReadUInt32(string startAddress, ushort length, out uint[] value);
 
-        bool ReadInt64(string startAddress, ushort length, out long[] value);
+        void ReadFloat(string startAddress, ushort length, out float[] value);
 
-        bool ReadUInt64(string startAddress, ushort length, out ulong[] value);
+        void ReadInt64(string startAddress, ushort length, out long[] value);
 
-        bool ReadDouble(string startAddress, ushort length, out double[] value);
+        void ReadUInt64(string startAddress, ushort length, out ulong[] value);
 
-        bool ReadString(string startAddress, ushort length, out string value);
+        void ReadDouble(string startAddress, ushort length, out double[] value);
 
-        bool Write(string address, byte[] value);
+        void ReadString(string startAddress, ushort length, out string value, Encoding encoding);
 
-        bool Write(string address, bool value);
+        void Write(string address, byte[] value);
 
-        bool Write(string address, bool[] value);
+        void Write(string address, bool value);
 
-        bool Write(string address, double value);
+        void Write(string address, bool[] value);
 
-        bool Write(string address, double[] value);
+        void Write(string address, double value);
 
-        bool Write(string address, float value);
+        void Write(string address, double[] value);
 
-        bool Write(string address, float[] value);
+        void Write(string address, float value);
 
-        bool Write(string address, int value);
+        void Write(string address, float[] value);
 
-        bool Write(string address, int[] value);
+        void Write(string address, int value);
 
-        bool Write(string address, long value);
+        void Write(string address, int[] value);
 
-        bool Write(string address, long[] value);
+        void Write(string address, long value);
 
-        bool Write(string address, short value);
+        void Write(string address, long[] value);
 
-        bool Write(string address, short[] value);
+        void Write(string address, short value);
 
-        bool Write(string address, string value, int length, Encoding encoding);
+        void Write(string address, short[] value);
 
-        bool Write(string address, ushort value);
+        void Write(string address, string value, int length, Encoding encoding);
 
-        bool Write(string address, ushort[] value);
+        void Write(string address, ushort value);
 
-        bool Write(string address, uint value);
+        void Write(string address, ushort[] value);
 
-        bool Write(string address, uint[] value);
+        void Write(string address, uint value);
 
-        bool Write(string address, ulong value);
+        void Write(string address, uint[] value);
 
-        bool Write(string address, ulong[] value);
+        void Write(string address, ulong value);
+
+        void Write(string address, ulong[] value);
     }
 }
