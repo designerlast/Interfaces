@@ -1,5 +1,4 @@
 ﻿using IntellVega.CBB.Interfaces.Attributes;
-using IntellVega.CBB.Interfaces.PathSelection;
 
 namespace IntellVega.CBB.Interfaces.SystemSetting
 {
@@ -33,7 +32,7 @@ namespace IntellVega.CBB.Interfaces.SystemSetting
         /// 图片导出路径
         /// </summary>
         [SelectFolderAttribute("图片导出路径")]
-        public FilePathString ImageExportPath { get; set; }
+        public string ImageExportPath { get; set; }
 
         /// <summary>
         /// 是否保存图片

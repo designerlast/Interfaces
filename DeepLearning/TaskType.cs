@@ -16,13 +16,16 @@ namespace IntellVega.CBB.Interfaces.DeepLearning
         [Display(Name = "定位")]
         location = 3,
 
-        [Display(Name = "单个光学字符识别")]
-        lineocr = 4,
+        [Display(Name = "OCR")]
+        ocr = 4,
 
-        [Display(Name = "多个光学字符识别")]
-        bendocr = 5,
+        [Display(Name = "直行OCR")]
+        lineocr = 5,
+
+        //[Display(Name = "弯曲OCR")]
+        //bendocr = 6,
 
         [Display(Name = "异常检测")]
-        abnormalDet = 6,
+        abnormalDet = 7
     }
 }
