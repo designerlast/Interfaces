@@ -9,5 +9,6 @@
         void ImageChanged(string imgPath, bool inCollection);
 
         void DeleteToLabelList(string ShapeID);
+        void InitLabelList<T>(T Data);
     }
 }
