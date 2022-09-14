@@ -22,8 +22,8 @@ namespace IntellVega.CBB.Interfaces.DeepLearning
         [Display(Name = "直行OCR")]
         lineocr = 5,
 
-        //[Display(Name = "弯曲OCR")]
-        //bendocr = 6,
+        [Display(Name = "弯曲OCR")]
+        bendocr = 6,
 
         [Display(Name = "异常检测")]
         abnormalDet = 7
