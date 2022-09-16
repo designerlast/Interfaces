@@ -7,5 +7,9 @@ namespace IntellVega.CBB.Interfaces.Plc
     public interface IPlcProtocolManangerService
     {
         ICommonCommunication GetPlcProtocol(string plcProtocolName);
+
+        IEnumerable<string> GetAddedPlcProtocolName();
+
+        void ConnectPlc();
     }
 }

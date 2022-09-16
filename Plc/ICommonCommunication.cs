@@ -10,7 +10,7 @@ namespace IntellVega.CBB.Interfaces.Plc
         bool IsOpen { get; }
         //实例名称
         string Name { get; }
-        //相同实例的流水号
+        //流水号
         int CountNum { get; }
         Guid Guid { get; }
 
