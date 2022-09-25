@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IntellVega.CBB.Interfaces.CunstomMessageBoxResult;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -15,5 +16,15 @@ namespace IntellVega.CBB.Interfaces
         void Error(string message);
 
         void Ask(string message, Func<bool, bool> actionBeforeClose);
+
+        MegaMessageBoxResult InfoDialog(string message);
+
+        MegaMessageBoxResult SuccessDialog(string message);
+
+        MegaMessageBoxResult WarningDialog(string message);
+
+        MegaMessageBoxResult ErrorDialog(string message);
+
+        MegaMessageBoxResult AskDialog(string message);
     }
 }
