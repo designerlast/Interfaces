@@ -1,4 +1,5 @@
-﻿using IntellVega.CBB.Interfaces.Enums;
+﻿using System.ComponentModel;
+using IntellVega.CBB.Interfaces.Enums;
 using System.Drawing;
 
 namespace IntellVega.CBB.Interfaces
@@ -64,5 +65,11 @@ namespace IntellVega.CBB.Interfaces
         /// </summary>
         /// <param name="message"></param>
         void SetDetectionResult(object viewModel, DetectionResult result);
+        /// <summary>
+        /// 设置功能区是否可见
+        /// </summary>
+        /// <param name="region"></param>
+        /// <param name="isVisible"></param>
+        void SetRegionVisibility(ImageViewerRegion region, bool isVisible);
     }
 }
