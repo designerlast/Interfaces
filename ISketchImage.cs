@@ -11,6 +11,17 @@ namespace IntellVega.CBB.Interfaces
         /// </summary>
         /// <param name="message"></param>
         void SetTitleMessage(object viewModel, string message);
+        /// <summary>
+        /// 设置SketchImage顶部相机名称
+        /// </summary>
+        /// <param name="cameraName">相机名称</param>
+        void SetCameraName(object viewModel,string cameraName);
+        /// <summary>
+        /// 设置SketchImage顶部CT流程时间
+        /// </summary>
+        /// <param name="viewModel"></param>
+        /// <param name="cTTime"></param>
+        void SetCTTime(object viewModel, double cTTime);
 
         /// <summary>
         /// 设置控件背景图片
