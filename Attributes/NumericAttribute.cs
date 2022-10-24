@@ -8,19 +8,20 @@ namespace IntellVega.CBB.Interfaces.Attributes
         /// <summary>
         /// 最小值
         /// </summary>
-        public int Min { get; set; }
+        public double Min { get; set; }
 
         /// <summary>
         /// 最大值
         /// </summary>
-        public int Max { get; set; }
+        public double Max { get; set; }
 
         /// <summary>
         /// 增量
         /// </summary>
-        public int Increment { get; set; }
+        public double Increment { get; set; }
 
-        public NumericAttribute(string remarkLocalName, bool isEnabled = true, int min = 0, int max = 100, int increment = 1)
+
+        public NumericAttribute(string remarkLocalName, bool isEnabled = true, double min = 0d, double max = 100d, double increment = 1d)
             : base(remarkLocalName, isEnabled)
         {
             this.RemarkLocalName = remarkLocalName;
