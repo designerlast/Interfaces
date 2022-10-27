@@ -8,11 +8,8 @@ namespace IntellVega.CBB.Interfaces.ROIWindow
     public interface ITemplateMatchingWindowManager
     {
         public bool ShowDialog(MatchType matchType);
-
-        /// <summary>
-        /// 获取模型
-        /// </summary>
-        /// <returns></returns>
-        public object GetModel(MatchType matchType);
+        public bool ShowAndSetData(MatchType matchType, string modelPath);
+        public string GetResult(MatchType matchType);
+        public object GetNCCModel(string modelPath);
     }
 }
