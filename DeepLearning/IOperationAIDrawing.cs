@@ -1,4 +1,6 @@
-﻿namespace IntellVega.CBB.Interfaces.DeepLearning
+﻿using System.Collections.Generic;
+
+namespace IntellVega.CBB.Interfaces.DeepLearning
 {
     public interface IOperationAIDrawing
     {
@@ -17,5 +19,6 @@
         void SetImageExistsLabels(string[] files);
 
         void SetInferLabels(string file, TaskType type, object obj);
+        Dictionary<string, string> GetMarkedByyeString(List<string> ImgList);
     }
 }
