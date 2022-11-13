@@ -10,7 +10,7 @@ namespace IntellVega.CBB.Interfaces.Statistics
         /// 获取工位名称列表
         /// </summary>
         /// <returns></returns>
-        List<string> LoadStationNames();
+        IEnumerable<string> LoadStationNames();
 
         /// <summary>
         /// 加载统计数据
@@ -28,6 +28,18 @@ namespace IntellVega.CBB.Interfaces.Statistics
         /// <param name="stations"></param>
         /// <param name="checkResult"></param>
         /// <returns></returns>
-        List<RunRecord> SearchRecords(DateTime? startTime, DateTime? endTime, IEnumerable<string> stations, DetectionResult checkResult);
+        IEnumerable<T> SearchRecords<T>(DateTime? startTime, DateTime? endTime, IEnumerable<string> stations, DetectionResult checkResult) where T:BaseRecord;
+
+        /// <summary>
+        /// 获取程序集下所有继承baserecord的类型中特性CameraDataBaseModel定义的名称。
+        /// </summary>
+        /// <returns></returns>
+        IEnumerable<string> GetDatabaseModeNames();
+        /// <summary>
+        /// 通过名称获取对应的类型
+        /// </summary>
+        /// <param name="camera"></param>
+        /// <returns></returns>
+        Type GetModelTypeByCmaeraName(string camera);
     }
 }
